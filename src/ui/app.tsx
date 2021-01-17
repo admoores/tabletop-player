@@ -1,23 +1,21 @@
 import * as React from 'react';
-import { useState } from 'react';
 import {
   BrowserRouter as Router,
   Route,
   Switch,
-  Link,
 } from 'react-router-dom';
-import Display from './display/display';
-import Control from './control/control';
+import Navigation from './navigation/navigation';
+import Page1 from './page1/page1';
+import Page2 from './page2/page2';
 
 const App = (): JSX.Element => {
-  const [testState, setTestState] = useState<number>(0);
-
   return (
     <>
       <Router>
+        <Navigation />
         <Switch>
-          <Route exact path="/view" component={Display} />
-          <Route exact path="/edit" component={Control} />
+          <Route exact path="/page1" component={Page1} />
+          <Route exact path="/page2" component={Page2} />
         </Switch>
       </Router>
     </>

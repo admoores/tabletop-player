@@ -4,8 +4,8 @@
   "description": "control app for D&D gaming table",
   "main": "index.js",
   "scripts": {
-    "start": "node dist/server/tablectl.js",
-    "start:dev": "ts-node-dev --watch --respawn --clear --exit-child --no-deps --project tsconfig.json --log-error src/server/tablectl.ts",
+    "start": "node dist/server/tabletop-player.js",
+    "start:dev": "ts-node-dev --watch --respawn --clear --exit-child --no-deps --project tsconfig.json --log-error src/server/tabletop-player.ts",
     "build": "tsc",
     "build:ui": "webpack -p",
     "start:ui": "webpack -d --watch"
