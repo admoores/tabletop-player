@@ -14,8 +14,8 @@ const App = (): JSX.Element => {
       <Router>
         <Navigation />
         <Switch>
-          <Route exact path="/page1" component={Page1} />
-          <Route exact path="/page2" component={Page2} />
+          <Route exact path="/p1" component={Page1} />
+          <Route exact path="/p2" component={Page2} />
         </Switch>
       </Router>
     </>
