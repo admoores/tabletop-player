@@ -10,6 +10,23 @@ export default function Route(server: Hapi.Server): void {
   });
 
   server.route({
+    method: 'GET',
+    path: '/list',
+    handler: TestHandlers.getList,
+  });
+
+  server.route({
+    method: 'POST',
+    path: '/list',
+    handler: TestHandlers.updateList,
+    options: {
+      validate: {
+        payload: TestSchemas.listValue,
+      }
+    }
+  })
+
+  server.route({
     method: 'POST',
     path: '/test',
     handler: TestHandlers.changeTest,
