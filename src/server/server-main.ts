@@ -31,17 +31,6 @@ async function configure(): Promise<void> {
     TestPlugin,
   ], registerOptions);
 
-  server.route({
-    method: 'GET',
-    path: '/{filename*}',
-    handler: {
-      directory: {
-        path: uiPath,
-        index: true,
-      },
-    },
-  });
-
   // Enable html5 path mode by returning index for all unknown routes
   server.ext('onPreResponse', (request: Request, h: ResponseToolkit) => {
     let statusCode: number;
