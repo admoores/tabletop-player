@@ -1,3 +1,6 @@
+import { initDb } from './db';
 import { start } from './server-main';
 
-start();
+initDb().then(() => {
+  start();
+});
